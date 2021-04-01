@@ -1,63 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-    <meta charset="UTF-8">
-
-        <link rel="icon" type="image/png" href="/assets/images/icons/favicon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/images/icons/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
-
 
     <script src="/assets/js/lazysizes.min.js" async=""></script>
     <!--
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;650;800;900&display=swap" rel="stylesheet">
     -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;650&display=swap" rel="stylesheet"> 
-    <link href="/assets/css/default.css" rel="stylesheet">    <link href="/assets/css/cookiecuttr.css" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;650&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/assets/css/default.css" rel="stylesheet" />
+    <link href="/assets/css/cookiecuttr.css" rel="stylesheet" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M1S6P11C1W"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-M1S6P11C1W',{ 'anonymize_ip': true });
-</script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-M1S6P11C1W"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-M1S6P11C1W", { anonymize_ip: true });
+    </script>
+  </head>
 
-
-
-</head>
-
-<body class="">
-
-
-
-    <div class="cc-cookies" id="cookies-eu-banner" style="display: none;">
-        <strong>Wir nutzen Cookies</strong>
-        <button class="button" id="cookies-eu-accept">Cookies akzeptieren</button>
-        <br />
-        <a style="margin-top: 5px;" rel=“noopener noreferrer“ href="http://www.allaboutcookies.org/" id="cookies-eu-more" target="_blank">Mehr erfahren</a>
-        <br />
+  <body class="">
+    <div class="cc-cookies" id="cookies-eu-banner" style="display: none">
+      <strong>Wir nutzen Cookies</strong>
+      <button class="button" id="cookies-eu-accept">Cookies akzeptieren</button>
+      <br />
+      <a
+        style="margin-top: 5px"
+        rel="“noopener"
+        noreferrer“
+        href="http://www.allaboutcookies.org/"
+        id="cookies-eu-more"
+        target="_blank"
+        >Mehr erfahren</a
+      >
+      <br />
     </div>
 
+    <header class="header">
+      <div id="overlay" class="overlay">
+        <nav class="header__menu">
+          <a
+            style="height: 130px"
+            href="/"
+            class="header__logo hide-on-desktop hide-on-tablet"
+          >
+            <img
+              class="lazyload"
+              data-src="/assets/images/icons/plan_c_logo_bg.svg"
+              alt=""
+            />
+          </a>
 
-    <header class="header ">
-        <div id="overlay" class="overlay ">
-            <nav class="header__menu ">
-                <a style="height:130px;" href="/" class="header__logo hide-on-desktop hide-on-tablet">
-                    <img class="lazyload" data-src="/assets/images/icons/plan_c_logo_bg.svg" alt="">
-                </a>
+          <a>
+            <a href="/">Home</a>
+            <a href="/selbstverpflichtung">Selbstverpflichtung</a>
+            <a href="/konzept">Der Plan C</a>
+            <a href="/uber-planc">&Uuml;ber uns</a>
+            <a href="/mithelfen">Engagement</a>
+            <a href="/impressum">Impressum</a>
+          </a>
 
-                <a>
-                                            <a href="/">Home</a>                                            <a href="//selbstverpflichtung">Selbstverpflichtung</a>                                            <a href="//konzept">Der Plan C</a>                                            <a href="//uber-planc">&Uuml;ber uns</a>                                            <a href="//mithelfen">Engagement</a>                                            <a href="//impressum">Impressum</a>                                        
-                </a>
-
-
-
-                <!--
+          <!--
                 <a href="https://app.typestudio.co/" class="button GTM--Header_mobile_Sign_Up" style="color:white; font-size: 1rem; margin-top: 120px;">Sign up now</a>
-                -->    
-                <!--   
+                -->
+          <!--   
                 <nav>
                     <div class="footer__social">
                         <a class="GTM--Header_mobile_login" href="https://app.typestudio.co/login">Login</a>
@@ -84,154 +103,204 @@
                     </div>
                 </nav>
                     -->
-            </nav>
+        </nav>
+      </div>
+      <nav class="flex flex-jc-sb">
+        <a href="/" class="header__logo hide-on-phone">
+          <img
+            class="lazyload"
+            data-src="/assets/images/icons/plan_c_logo_bg.svg"
+            alt=""
+          />
+        </a>
+
+        <a href="/" class="header__logo hide-on-desktop hide-on-tablet">
+          <img
+            class="lazyload"
+            data-src="/assets/images/icons/plan_c_logo_bg.svg"
+            alt=""
+          />
+        </a>
+
+        <a href="#" id="btnHamburger" class="header__toggle hide-on-desktop">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+
+        <div class="header__links hide-on-tablet hide-on-phone">
+          <a>
+            <a href="/">Home</a>
+            <a href="/selbstverpflichtung">Selbstverpflichtung</a>
+            <a href="/konzept">Der Plan C</a>
+            <a href="/uber-planc">&Uuml;ber uns</a>
+            <a href="/mithelfen">Engagement</a>
+          </a>
         </div>
-        <nav class="flex flex-jc-sb ">
-            <a href="/" class="header__logo hide-on-phone">
-                <img class="lazyload" data-src="/assets/images/icons/plan_c_logo_bg.svg" alt="">
-            </a>
-
-            <a href="/" class="header__logo hide-on-desktop hide-on-tablet">
-                <img class="lazyload" data-src="/assets/images/icons/plan_c_logo_bg.svg" alt="">
-            </a>
-
-
-
-            <a href="#" id="btnHamburger" class="header__toggle hide-on-desktop ">
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
-
-            <div class="header__links hide-on-tablet hide-on-phone">
-
-
-                <a>
-                                            <a href="/">Home</a>                                            <a href="//selbstverpflichtung">Selbstverpflichtung</a>                                            <a href="//konzept">Der Plan C</a>                                            <a href="//uber-planc">&Uuml;ber uns</a>                                            <a href="//mithelfen">Engagement</a>                                                        </a>
-            </div>
-            <!--
+        <!--
             <a href="https://app.typestudio.co/" type="button" class="button header__cta hide-on-tablet hide-on-phone GTM--Header_Desktop_Sign_up" style="color: white;"></a>
             -->
-        </nav>
-
-
+      </nav>
     </header>
-<section style="margin-top: 50px" class="content blog">
-<div class = "maxwidth-wrapper-pagebuilder headersnippet default-container">
-  <h1>Blog</h1>
-  <p>This is a very insightful blog about things I know.</p></div>
-<div class="maxwidth-wrapper-pagebuilder">
-  
-  <article>
-      <div style="margin-bottom:50px;">
-      <a href="//blog/plan-c-startet-durch-im-neuen-jahr"><h3>Plan C startet durch im neuen Jahr</h3></a>
-    <p>Nach vielen internen Diskussionen und sorgfältigem Abwägen von Pro- und Contra-Optionen haben wir schließlich die Entscheidung getroffen, das offizielle Startdatum von Plan C auf den Zeitraum vom 03.01.2021 - 09.01.2021 zu verlegen. Die Gründe dafür haben wir bereits kurz in den beiden …</p>
-    <a href="//blog/plan-c-startet-durch-im-neuen-jahr">weiterlesen…</a>
-  </div>
-  </article>
+    <section style="margin-top: 50px" class="content blog">
+      <div class="maxwidth-wrapper-pagebuilder headersnippet default-container">
+        <h1>Blog</h1>
+        <p>This is a very insightful blog about things I know.</p>
+      </div>
+      <div class="maxwidth-wrapper-pagebuilder">
+        <article>
+          <div style="margin-bottom: 50px">
+            <a href="/blog/plan-c-startet-durch-im-neuen-jahr"
+              ><h3>Plan C startet durch im neuen Jahr</h3></a
+            >
+            <p>
+              Nach vielen internen Diskussionen und sorgfältigem Abwägen von
+              Pro- und Contra-Optionen haben wir schließlich die Entscheidung
+              getroffen, das offizielle Startdatum von Plan C auf den Zeitraum
+              vom 03.01.2021 - 09.01.2021 zu verlegen. Die Gründe dafür haben
+              wir bereits kurz in den beiden …
+            </p>
+            <a href="/blog/plan-c-startet-durch-im-neuen-jahr">weiterlesen…</a>
+          </div>
+        </article>
 
-  
-  <article>
-      <div style="margin-bottom:50px;">
-      <a href="//blog/briefvorlage-fuer-die-veranstaltungsbranche"><h3>Briefvorlage f&uuml;r die Veranstaltungsbranche</h3></a>
-    <p>Das Team von Plan C arbeitet im Hintergrund beständig, auch wenn das die Öffentlichkeit nicht unmittelbar sieht. Heute ist das anders. Dank des wunderbaren Esprits unserer Texterinnen können wir heute eine neue Briefvorlage präsentieren, die sich an Verantwortliche in der Kultur- und …</p>
-    <a href="//blog/briefvorlage-fuer-die-veranstaltungsbranche">weiterlesen…</a>
-  </div>
-  </article>
+        <article>
+          <div style="margin-bottom: 50px">
+            <a href="/blog/briefvorlage-fuer-die-veranstaltungsbranche"
+              ><h3>Briefvorlage f&uuml;r die Veranstaltungsbranche</h3></a
+            >
+            <p>
+              Das Team von Plan C arbeitet im Hintergrund beständig, auch wenn
+              das die Öffentlichkeit nicht unmittelbar sieht. Heute ist das
+              anders. Dank des wunderbaren Esprits unserer Texterinnen können
+              wir heute eine neue Briefvorlage präsentieren, die sich an
+              Verantwortliche in der Kultur- und …
+            </p>
+            <a href="/blog/briefvorlage-fuer-die-veranstaltungsbranche"
+              >weiterlesen…</a
+            >
+          </div>
+        </article>
 
-  
-  <article>
-      <div style="margin-bottom:50px;">
-      <a href="//blog/plan-c-wie-geht-es-weiter"><h3>Plan C - Wie geht es weiter?</h3></a>
-    <p>Diese Frage erreichte uns von vielen Menschen, die ebenso wie wir mit den neuen Corona-Maßnahmen der Bundesregierung konfrontiert sind. Leider konnten wir, entgegen der ursprünglichen Ankündigung, am Montag noch keine definitive Aussage zum weiteren Verlauf von Plan C geben. Wir benötigten etwas …</p>
-    <a href="//blog/plan-c-wie-geht-es-weiter">weiterlesen…</a>
-  </div>
-  </article>
+        <article>
+          <div style="margin-bottom: 50px">
+            <a href="/blog/plan-c-wie-geht-es-weiter"
+              ><h3>Plan C - Wie geht es weiter?</h3></a
+            >
+            <p>
+              Diese Frage erreichte uns von vielen Menschen, die ebenso wie wir
+              mit den neuen Corona-Maßnahmen der Bundesregierung konfrontiert
+              sind. Leider konnten wir, entgegen der ursprünglichen Ankündigung,
+              am Montag noch keine definitive Aussage zum weiteren Verlauf von
+              Plan C geben. Wir benötigten etwas …
+            </p>
+            <a href="/blog/plan-c-wie-geht-es-weiter">weiterlesen…</a>
+          </div>
+        </article>
 
-  
-  <article>
-      <div style="margin-bottom:50px;">
-      <a href="//blog/plan-c-statusupdate"><h3>Plan C: Statusupdate</h3></a>
-    <p>Liebe Mitstreiterinnen, Plan C will erreichen, dass der nächste Lockdown ein kurzer wird, und wie der übernächste ein planbarer. Dafür wollen wir messbar sein - und die erste Lockwoche für die Gewinnung aussagekräftiger Daten war für den 08.11. bis zum 14.11. geplant. Durch die aktuellen …</p>
-    <a href="//blog/plan-c-statusupdate">weiterlesen…</a>
-  </div>
-  </article>
+        <article>
+          <div style="margin-bottom: 50px">
+            <a href="/blog/plan-c-statusupdate"
+              ><h3>Plan C: Statusupdate</h3></a
+            >
+            <p>
+              Liebe Mitstreiterinnen, Plan C will erreichen, dass der nächste
+              Lockdown ein kurzer wird, und wie der übernächste ein planbarer.
+              Dafür wollen wir messbar sein - und die erste Lockwoche für die
+              Gewinnung aussagekräftiger Daten war für den 08.11. bis zum 14.11.
+              geplant. Durch die aktuellen …
+            </p>
+            <a href="/blog/plan-c-statusupdate">weiterlesen…</a>
+          </div>
+        </article>
+      </div>
+    </section>
 
-    </div>
-</section>
-
-
-<footer class="f-only-background">
-    <div class="footer">
-        <a href="/" class="footer__logo ">
-            <img class="lazyload" data-src="/assets/images/icons/plan_c_logo_bg.svg" alt="Plan C Logo ">
-
+    <footer class="f-only-background">
+      <div class="footer">
+        <a href="/" class="footer__logo">
+          <img
+            class="lazyload"
+            data-src="/assets/images/icons/plan_c_logo_bg.svg"
+            alt="Plan C Logo "
+          />
         </a>
         <nav>
-
-
-
-        
-            <div class="footer__social">
-                <a class="hide-on-phone hide-on-tablet" href="#" style="pointer-events: none">Folgt uns</a>
-                <br class="hide-on-phone hide-on-tablet">
-                <!--
+          <div class="footer__social">
+            <a
+              class="hide-on-phone hide-on-tablet"
+              href="#"
+              style="pointer-events: none"
+              >Folgt uns</a
+            >
+            <br class="hide-on-phone hide-on-tablet" />
+            <!--
                 <a target="_blank" rel=“noopener noreferrer“ href="#" id="linkedin">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
                 -->
 
-                <a target="_blank" rel=“noopener noreferrer“ href="https://www.facebook.com/DerPlanC" id="facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
+            <a
+              target="_blank"
+              rel="“noopener"
+              noreferrer“
+              href="https://www.facebook.com/DerPlanC"
+              id="facebook"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
 
-                <!--
+            <!--
                 <a target="_blank" rel=“noopener noreferrer“ href="#" id="youtube">
                     <i class="fa fa-youtube"></i>
                 </a>
                 -->
-                <!--
+            <!--
                 <a target="_blank" rel=“noopener noreferrer“ href="#" id="instagram">
                     <i class="fa fa-instagram"></i>
                 </a>
                 -->
-                <a target="_blank" rel=“noopener noreferrer“ href="https://twitter.com/DerPlanC" id="twitter">
-                    <i class="fa fa-twitter"></i>
-                </a>
-
-
-
-            </div>
-        
+            <a
+              target="_blank"
+              rel="“noopener"
+              noreferrer“
+              href="https://twitter.com/DerPlanC"
+              id="twitter"
+            >
+              <i class="fa fa-twitter"></i>
+            </a>
+          </div>
         </nav>
 
         <div class="footer__links col1 ta-left">
-            <a>
-                    <a href="/">Home</a>                    <a href="//selbstverpflichtung">Selbstverpflichtung</a>                    <a href="//konzept">Der Plan C</a>                    <a href="//uber-planc">&Uuml;ber uns</a>                    <a href="//mithelfen">Engagement</a>                        </a>
-
+          <a>
+            <a href="/">Home</a>
+            <a href="/selbstverpflichtung">Selbstverpflichtung</a>
+            <a href="/konzept">Der Plan C</a>
+            <a href="/uber-planc">&Uuml;ber uns</a>
+            <a href="/mithelfen">Engagement</a>
+          </a>
         </div>
         <div class="footer__links col2 ta-left">
-        <a></a>
-        <a href="/impressum">Impressum</a>
-        <a href="/privacy"> Privacy Policy</a>
-        <a href="/contact">Kontakt</a>
-        <a href="/helfer">Helfer</a>
-        <a href="/presse">Presse</a>
-
+          <a></a>
+          <a href="/impressum">Impressum</a>
+          <a href="/privacy"> Privacy Policy</a>
+          <a href="/contact">Kontakt</a>
+          <a href="/helfer">Helfer</a>
+          <a href="/presse">Presse</a>
         </div>
 
-        <div class="footer__links col3 ta-left">
-
-        </div>
-
-
-    </div>
-
-</footer>
-<!-- FONT AWESOME NEEDS TO BE REPLACED -->
-<script src="https://kit.fontawesome.com/55f75079df.js" crossorigin="anonymous"></script>
-<script src="/assets/js/script.js"></script><script src="/assets/js/cookies-eu-banner.js"></script><script src="/assets/js/cookie.js"></script><script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
-</body>
-
+        <div class="footer__links col3 ta-left"></div>
+      </div>
+    </footer>
+    <!-- FONT AWESOME NEEDS TO BE REPLACED -->
+    <script
+      src="https://kit.fontawesome.com/55f75079df.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/cookies-eu-banner.js"></script>
+    <script src="/assets/js/cookie.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  </body>
 </html>
