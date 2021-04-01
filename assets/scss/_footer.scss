@@ -1,0 +1,129 @@
+.f-only-background {
+  background-color: $almostWhite;
+}
+
+.footer {
+  grid-column-gap: 33px;
+  background-color: $almostWhite;
+  color: $pcolor;
+  padding: 1.6rem;
+  text-align: center;
+  max-width: $maxwidth;
+  margin: 0 auto;
+
+  @include media(">tablet") {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "logo links1 links2 links3 social "
+      "logo links1 links2 links3 social ";
+
+    justify-items: start;
+  }
+
+  a {
+    color: $pcolor;
+  }
+
+  &__logo {
+    p {
+      text-align: left;
+    }
+    @include media(">tablet") {
+      grid-area: logo;
+    }
+    img {
+      height: 51px;
+    }
+    margin-bottom: 1.875rem;
+    display: block;
+  }
+
+  &__social {
+    font-size: $f-small;
+    a {
+      @include media("<tablet") {
+        font-size: $f-p;
+      }
+      line-height: 2.25;
+      &:first-child {
+        //color: $h1color;
+        //font-weight: $f-w-bold;
+      }
+      &:last-child {
+        margin-bottom: 40px;
+      }
+    }
+
+    @include media(">tablet") {
+      grid-area: social;
+      text-align: left;
+    }
+    margin-bottom: 1.875rem;
+    display: inline-block;
+    a:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: $f-small;
+
+    @include media(">tablet") {
+      align-items: start;
+    }
+
+    a {
+      @include media("<tablet") {
+        font-size: $f-p;
+      }
+      line-height: 2.25;
+      &:first-child {
+        color: $h1color;
+        font-weight: $f-w-bold;
+      }
+      &:last-child {
+        margin-bottom: 40px;
+      }
+    }
+
+    &.col1 {
+      @include media(">tablet") {
+        grid-area: links1;
+      }
+    }
+    &.col2 {
+      @include media(">tablet") {
+        grid-area: links2;
+      }
+    }
+    &.col3 {
+      @include media(">tablet") {
+        grid-area: links3;
+        margin-bottom: 1.875rem;
+      }
+    }
+  }
+
+  &__cta {
+    text-align: center;
+    @include media(">tablet") {
+      //  display: none;
+      // grid-area: cta;
+    }
+    margin-bottom: 1.875rem;
+    a {
+      display: block;
+      //  margin-left: 10rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: $f-small;
+      color: $pcolor;
+    }
+  }
+}

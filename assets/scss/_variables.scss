@@ -1,0 +1,118 @@
+// Colors
+
+//mainAkzentfarbe
+$darkBlue:#126b5e;
+$newBlue: #23B7A0;
+
+$mainAccent: $newBlue;
+$white: #fff;
+
+$transparent: #ffffff00;
+
+$almostWhite: #fcfcfc;
+$almostBlack: #1a1a1a;
+$black: #000;
+$blackShadow: rgba(0, 0, 0, 0.459);
+$textGray: rgb(78, 78, 78);
+$textBlack: #000;
+$textWhite: #fff;
+
+$menuColor: #ccc;
+
+
+//@include
+$littleTuna: #4F65D2;
+$littlePig: #FFE1DF;
+$littleBee: #FFC756;
+$littleShark: #1F16B0;
+
+
+//Buttons F1F2E9
+$border-radius: 7px;
+$border-width: 1px;
+
+//buttoncolor
+$plainbutton-background: $newBlue;
+$plainbutton-text: #f1f2e9;
+
+$secondbutton-background: #ffffff00;
+$secondbutton-text: #313131;
+
+$thirdbutton-background: #ffffff00;
+$thirdbutton-text: #f1f2e9;
+
+$hovercolor: $darkBlue;
+
+//Fontcolor
+
+$h3color: $newBlue;
+$h4color: #6b6b6b;
+
+$fontwhite: #f1f2e9;
+$fontverylight: #cfcfcf;
+$lightgray: #999999;
+
+//Font sizes
+$f-small: 0.8rem;
+$f-medium: 1.1rem;
+$f-bold: 1.63rem;
+$f-big: 2.13rem;
+$f-heavy: 2.63rem;
+$f-extreme: 3.33rem;
+
+$f-w-medium: 500;
+$f-w-bold: 800;
+$f-w-extreme: 900;
+
+//H1
+// $f-h1: 4.5rem;
+// $f-w-h1: 600; //war 800
+// $h1color: #242424;
+//test
+
+$f-h1: 4.2rem;
+$f-w-h1: 900; //war 800
+$h1color: $newBlue;
+
+//H2
+$f-h2: 2.5rem;
+$f-w-h2: 650; //730
+$h2color: $newBlue;
+
+//H3
+$f-h3: 1.53rem;
+$f-w-h3: 600; //620
+
+//p
+$f-p: 1.03rem;
+$f-w-p: 400;
+$f-w-p-thin: 350;
+$pcolor: #616161;
+
+//caption
+$f-caption: 0.8rem;
+$f-w-caption: 400;
+$captioncolor: #616161; //was cfcfcf -> had to increase because of seo
+
+// //button
+$f-w-button: 650;
+//Margins
+
+$maxwidth: 1100px;
+$marginSmall: 15px;
+$marginsBetweenBlocks: 80px;
+
+//specific
+$plainbutton-background-light: $darkBlue;
+
+
+
+
+//mixins
+
+@mixin default-shadow {
+    -webkit-box-shadow: 0px 6px 26px 0px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0px 6px 26px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 6px 26px 0px rgba(0, 0, 0, 0.08);
+    
+}

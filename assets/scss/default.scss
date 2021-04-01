@@ -1,0 +1,18 @@
+@import "breakpoints";
+@import "animations";
+@import "variables";
+@import "globals";
+@import "header";
+@import "footer";
+
+//snippets
+@import "snippet-top-bottom-cta";
+@import "pricing";
+@import "content-blocks";
+@import "modal";
+
+//landingpage specific
+@import "landingpage";
+
+//effects
+@import "fancystuff";

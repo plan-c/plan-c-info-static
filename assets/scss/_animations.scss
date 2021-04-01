@@ -1,0 +1,66 @@
+@keyframes fade-in {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-toggle-in {
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes disco {
+  0% {
+    color: #00ffaa;
+  }
+  33% {
+    color: #ffbb00;
+  }
+  66% {
+    color: #ff1a8d;
+  }
+}
+
+@keyframes discoBG {
+  0% {
+    background-color: #00a2ff;
+    box-shadow: 0 8px 16px 0#ffbb0050;
+  }
+  33% {
+    background-color: #ffbb00;
+    box-shadow: 0 8px 16px 0 #ff1a8d40;
+  }
+  66% {
+    background-color: #ff1a8d;
+    box-shadow: 0 8px 16px 0#00ffaa60;
+  }
+}
+
+@keyframes buttonhover {
+  from {
+    transform: translateY(0px);
+  }
+
+  to {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes buttonhoverafter {
+  from {
+    transform: translateY(-2px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
+}

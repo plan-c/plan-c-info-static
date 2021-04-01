@@ -1,0 +1,11 @@
+.text-img-grid {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 24px;
+  //width: 1000px;
+
+  img {
+    width: 100%;
+  }
+}

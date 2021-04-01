@@ -1,0 +1,1344 @@
+////////// - FONTS - //////////
+
+
+
+
+///MIXINS
+
+@mixin default-shadow {
+  -webkit-box-shadow: 0px 6px 26px 0px rgba(0, 0, 0, 0.13);
+  -moz-box-shadow: 0px 6px 26px 0px rgba(0, 0, 0, 0.13);
+  box-shadow: 0px 6px 26px 0px rgba(0, 0, 0, 0.13);
+
+}
+
+
+
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0px;
+  padding: 0;
+  line-height: 1.3;
+  font-size: $f-medium;
+  font-weight: $f-w-medium;
+  background-color: $almostWhite;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+a,a:visited{
+  color:$newBlue;
+}
+
+a:hover {
+  color:$darkBlue;
+}
+
+////////// - SHORTCUTS - //////////
+////////// - FLEXBOX - //////////
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+//other
+.ta-default {
+  text-align: right;
+
+  @include media("<=phone") {
+    text-align: left;
+  }
+}
+
+.a-s-center {
+  align-self: center;
+}
+
+.ta-center {
+  text-align: center;
+}
+
+.ta-left {
+  text-align: left;
+}
+
+.ta-right {
+  text-align: right;
+}
+
+////////// - BUTTONS - //////////
+button,
+.button {
+  border:none;
+  box-sizing: border-box;
+  padding: 1rem 1.175rem;
+  border-radius: $border-radius;
+  cursor: pointer;
+  background-image: linear-gradient(to top left,#23b792,#23b2b7);
+  //background-color: $plainbutton-background;
+  //border: solid;
+  border-width: $border-width;
+  border-color: $plainbutton-background;
+  color: $fontwhite;
+  font-weight: $f-w-button;
+  letter-spacing: 0.3px;
+  animation: buttonhoverafter 200ms normal forwards;
+
+  @include media("<=phone") {
+    padding: 1rem 1.875rem;
+    font-size: $f-small;
+  }
+
+  @include media(">=phone", "<tablet") {
+    font-size: $f-small;
+  }
+
+  &:hover {
+    background-image: linear-gradient(to top left,#168359,#17848b);
+    background-color: $darkBlue;
+    animation: buttonhover 100ms normal forwards;
+    //border-color: $darkBlue;
+    //border:none;
+  }
+
+  &__second {
+    //eg. pricing button -> use this as secondary Button
+    border-color: $secondbutton-text;
+    background-color: $secondbutton-background;
+    color: $secondbutton-text;
+
+    &:hover {
+      color: $plainbutton-text;
+    }
+  }
+
+  &__third {
+    //eg the footer cta
+    border-color: $thirdbutton-text;
+    background-color: $thirdbutton-background;
+    color: $thirdbutton-text;
+  }
+
+  &__invisible {
+    border-color: $transparent;
+    background-color: $transparent;
+    color: $plainbutton-background;
+  }
+
+  &__invisible:hover {
+    background-color: $fontverylight;
+    animation: buttonhover 100ms normal forwards;
+    border-color: $transparent;
+  }
+
+  &__fill {
+    display: block;
+    text-align: center;
+  }
+
+  &__limit-to-one-row {
+    max-height: 57px;
+  }
+
+  &__spacing-0 {
+    letter-spacing: 0px;
+  }
+
+  &__center {
+    max-width: fit-content;
+    margin: 0 auto;
+  }
+}
+
+////////// - FONTS STYLING- //////////
+
+.little-bee {
+  color: $littleBee;
+}
+
+.little-tuna {
+  color: $littleTuna;
+}
+
+.little-shark {
+  color: $littleShark;
+}
+
+.little-pig {
+  color: $littlePig;
+}
+
+h1 {
+  font-weight: $f-w-h1;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: $f-h1;
+  line-height: 1.3;
+  letter-spacing: 0.6px;
+
+  span {
+    color: $newBlue;
+  }
+
+  color: $h1color;
+
+  @include media(">phone", "<tablet") {
+    font-size: $f-big;
+    // letter-spacing: -2.6px;
+    // line-height: 1.2;
+  }
+
+  @include media("<phone") {
+    font-size: $f-big;
+    // line-height: 1.3;
+    letter-spacing: -0.6px;
+  }
+}
+
+h2 {
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: $f-w-h2;
+  margin: 0px;
+  font-size: $f-h2;
+  line-height: 1.3;
+  color: $h2color;
+
+  span {
+    color: $newBlue;
+  }
+
+  @include media(">phone", "<tablet") {
+    // font-size: $f-bold;
+    letter-spacing: -1px;
+  }
+
+  @include media("<phone") {
+    font-size: 1.8rem;
+
+    letter-spacing: -1px;
+  }
+}
+
+h3 {
+  margin-bottom: 40px;
+  font-weight: $f-w-h3;
+  font-size: $f-h3;
+  line-height: 1.4;
+  color: $h3color;
+  margin-bottom: 0px;
+
+  @include media(">phone", "<tablet") {
+    // font-size: $f-small;
+    // line-height: 1.1;
+    letter-spacing: -1px;
+  }
+
+  @include media("<phone") {
+    // font-size: $f-small;
+    // line-height: 1.1;
+    letter-spacing: -1px;
+  }
+}
+
+h4 {
+  color: $h4color;
+}
+
+p {
+  font-weight: $f-w-p;
+  font-size: $f-p;
+  color: $pcolor;
+  line-height: 1.8;
+}
+
+ul li {
+  font-weight: $f-w-p;
+  font-size: $f-p;
+  color: $pcolor;
+  line-height: 1.8;
+}
+
+.content-text {
+  font-weight: $f-w-p-thin;
+}
+
+////////// - GENERAL VISIBILITY - //////////
+.hide-on-phone {
+  @include media("<=phone") {
+    display: none;
+  }
+}
+
+.hide-on-tablet {
+  @include media(">=phone", "<=tablet") {
+    display: none;
+  }
+}
+
+.hide-on-desktop {
+  @include media(">tablet") {
+    display: none;
+  }
+}
+
+////////// - MAIN CONTAINER - //////////
+
+.default-container {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  // padding-top: 2vh;
+  padding-bottom: 4vh;
+
+  h1 {
+    margin-bottom: 10px;
+  }
+
+  &__fullwidth {
+    width: 100%;
+  }
+
+  &__border_padding {
+    padding-bottom: 50px;
+  }
+}
+
+////////// - CARDS - //////////
+.default-card {
+  -webkit-box-shadow: 0px 6px 26px 0px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: 0px 6px 26px 0px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 6px 26px 0px rgba(0, 0, 0, 0.08);
+  border-radius: $border-radius;
+  padding: 24px;
+  padding-bottom: 40px;
+  background-color: $white;
+
+  &:hover {
+    -webkit-box-shadow: 0px 6px 26px 0px rgba(0, 0, 0, 0.13);
+    -moz-box-shadow: 0px 6px 26px 0px rgba(0, 0, 0, 0.13);
+    box-shadow: 0px 6px 26px 0px rgba(0, 0, 0, 0.13);
+  }
+
+  @include media(">tablet") {
+    margin-bottom: 24px;
+  }
+
+  &__squarecard {
+    position: relative;
+    padding: 0px;
+    width: 200px;
+    height: 200px;
+
+    h2 {
+      padding-top: 12px;
+    }
+
+    p {
+      margin-top: 4px;
+      margin-bottom: 6px;
+    }
+
+    &__cardtext {
+      position: absolute;
+      bottom: 7px;
+
+      width: 100%;
+      text-shadow: 0px 0px 4px #00000050;
+    }
+  }
+
+  &__light {
+    min-height: 180px;
+    box-shadow: none;
+    border: solid;
+    border-width: $border-width;
+    border-color: $plainbutton-background-light;
+    background-color: $transparent;
+
+    h3 {
+      margin-top: 0px;
+    }
+
+    &:hover {
+      //background-color: $fontverylight;
+      @include default-shadow;
+      transition: all 0.2s;
+    }
+  }
+}
+
+////////// - CSS GRID - //////////
+.grid {
+  display: grid;
+  // margin: 0 auto;
+  grid-column-gap: 24px;
+
+  @include media("<=phone") {}
+
+  .default-card {
+    margin-bottom: 24px;
+  }
+
+
+
+  &__img-rounded {
+    border-radius: $border-radius;
+  }
+
+  &__section_title {
+    grid-template-areas: "headline""subheadline";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 10vh;
+
+    &__flip {
+      grid-template-areas: "subheadline""headline";
+
+      h2 {
+        margin-bottom: 0px;
+      }
+    }
+
+    &__headline {
+      grid-area: headline;
+    }
+
+    &__subheadline {
+      grid-area: subheadline;
+    }
+  }
+
+  ////////// - GRID ONE - //////////
+  &__one {
+    grid-template-columns: 1fr;
+
+    img {
+      width: 100%;
+      opacity: 1;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    &__big_img {
+      width: 100%;
+      // margin-bottom: -100px;
+    }
+  }
+
+  ////////// - GRID ONETWO - //////////
+  &__onetwo {
+    grid-template-columns: 1fr 2fr;
+
+    @include media("<=phone") {
+      grid-template-columns: 1fr;
+      max-width: 600px;
+    }
+
+    @include media(">=phone", "<tablet") {
+      grid-template-columns: 1fr 2fr;
+    }
+
+    @include media(">tablet", "<desktop") {
+      grid-template-columns: 1fr 2fr;
+    }
+
+    @include media(">=desktop") {
+      // empty a the momenta
+    }
+  }
+
+  ////////// - GRID TWO - //////////
+  &__two {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 100px;
+    grid-template-areas: "text image";
+    margin-right: 24px;
+    margin-left: 24px;
+
+
+    img {
+      width: 100%;
+      opacity: 1;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    &__flip {
+      grid-template-areas: "image text";
+    }
+
+    // TODO[END]: can be combined start with bigger that table -
+    @include media("<=phone") {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "image"
+        "text";
+      grid-row-gap: 40px;
+      margin-top: 60px;
+    }
+
+    @include media(">=phone", "<tablet") {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "image"
+        "text";
+      grid-row-gap: 40px;
+    }
+
+    @include media(">tablet", "<desktop") {}
+
+    @include media(">=desktop") {}
+
+    &__imgarea {
+      grid-area: image;
+      margin: 0px;
+    }
+
+    &__textarea {
+      grid-area: text;
+      text-align: left;
+    }
+
+    &__two_buttons_center {
+      max-width: fit-content;
+      margin: 0 auto;
+      grid-column-gap: 33px;
+    }
+
+    &__lightcard {
+      grid-column-gap: 30px;
+      width: -webkit-fill-available;
+      max-width: 780px;
+    }
+  }
+
+  ////////// - GRID THREE - //////////
+  &__three {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 50px;
+    grid-column-gap: 100px;
+    margin-top: 20px;
+
+    article {
+
+      position: relative;
+
+      .button {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+    @include media("<=phone") {
+
+      grid-template-columns: 1fr;
+      padding-left: 24px;
+      padding-right: 24px;
+      max-width: 600px;
+
+      p {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+
+      article {
+        margin-bottom: 25px;
+
+        .button {
+          bottom: -19px;
+          left: -3px;
+        }
+      }
+    }
+
+    @include media(">=phone", "<tablet") {
+      grid-template-columns: 1fr;
+      padding-left: 96px;
+      padding-right: 96px;
+
+      p {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+
+      article {
+        margin-bottom: 50px;
+
+        .button {
+          bottom: -19px;
+          left: -3px;
+        }
+      }
+
+    }
+
+    @include media(">tablet", "<desktop") {
+      grid-template-columns: 1fr 1fr 1fr;
+
+    }
+
+    @include media(">=desktop") {
+      // empty a the moment
+    }
+  }
+
+  ////////// - GRID THREETWO - //////////
+  &__threetwo {
+    grid-template-columns: 3fr 2fr;
+    grid-column-gap: 0px;
+    grid-template-areas: "image text";
+
+
+    &__article {
+
+      height: fit-content;
+    }
+
+    &__bottommargin {
+
+      height: 270px;
+      margin-top: 480px;
+    }
+
+    &__container {
+      border-radius: $border-radius;
+
+      height: 679px;
+      display: grid;
+      align-content: center;
+
+      &__no-flip {
+        padding-left: 24px;
+        padding-right: 0px;
+      }
+
+      &__flip {
+        padding-left: 0px;
+        padding-right: 24px;
+      }
+    }
+
+    h3,
+    p {
+      margin: 9px;
+    }
+
+    p {
+      margin-top: 17px;
+    }
+
+
+
+
+    //only for flip//
+    &__flip {
+      grid-template-areas: "text image";
+      grid-template-columns: 2fr 3fr;
+
+      &__imgarea {
+        @include default-shadow;
+        border-radius: $border-radius;
+        grid-area: image;
+        margin: 0px;
+      }
+
+      &__textarea {
+        border-radius: $border-radius;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        background-color: $almostWhite;
+        
+        padding: 24px;
+        // padding-right: 52px;
+        height: 100%;
+        grid-area: text;
+        align-self: center;
+      }
+    }
+
+    &__imgarea {
+      @include default-shadow;
+      border-radius: $border-radius;
+      grid-area: image;
+      margin: 0px;
+    }
+
+    &__textarea { 
+      border-radius: $border-radius;
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+      
+      background-color: $almostWhite;
+     
+      padding: 24px;
+      padding-left: 52px;
+      height: 100%;
+      grid-area: text;
+      align-self: center;
+    }
+
+    img {
+      margin: 0px;
+      border-radius: $border-radius;
+      height: auto;
+      width: 100%;
+    }
+
+    &__background_img_explain {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+
+    @include media(">=phone", "<tablet") {
+      grid-template-columns: 1fr;
+      grid-template-areas: "image"
+        "text";
+
+        padding-left: 70px;
+        padding-right: 70px;
+
+      &__textarea {
+        background-color: #F7F7F9;
+        
+        padding: 24px;
+
+      }
+
+      &__flip {
+        &__textarea {
+          background-color: #F7F7F9;
+         
+        }
+      }
+
+      &__container {
+        &__no-flip {
+          padding: 24px
+        }
+
+        &__flip {
+          padding: 24px
+        }
+      }
+    }
+
+    @include media("<=phone") {
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+                        "image"
+                        "text";
+
+      &__bottommargin {
+        height: 270px;
+        margin-top: 290px;
+      }
+
+      &__textarea {
+        background-color: #F7F7F9;
+        
+        padding: 24px;
+
+      }
+
+      &__flip {
+        &__textarea {
+          background-color: #F7F7F9;
+          
+        }
+      }
+
+      &__container {
+        height: 489px;
+        //  background-image: none !important;
+        //  background-color: $littleBee;
+
+        &__no-flip {
+          padding: 24px
+        }
+
+        &__flip {
+          padding: 24px
+        }
+      }
+    }
+  }
+
+  ////////// - GRID FOUR - //////////
+  &__four {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    @include media("<=phone") {
+      // width: 80vw;
+      grid-template-columns: 1fr;
+      max-width: 600px;
+    }
+
+    @include media(">=phone", "<tablet") {
+      grid-template-columns: 2fr 2fr;
+      // width: 80vw;
+    }
+
+    @include media(">tablet", "<desktop") {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-column-gap: 10px;
+      // width: 70vw;
+      margin: 0 auto;
+    }
+
+    @include media(">=desktop") {}
+  }
+
+  ////////// - GRID FIVE - //////////
+  &__five {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: fit-content;
+    margin: 0 auto;
+
+    h3 {
+      color: $fontwhite;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      height: 180px;
+
+      // text-shadow: 0px 1px 12px #000000;
+    }
+
+    @include media("<=phone") {
+      h3 {
+        font-size: 20px;
+
+        height: 112px;
+
+        // text-shadow: 0px 1px 12px #000000;
+      }
+
+      grid-template-columns: 1fr 1fr;
+
+      grid-column-gap: 12px;
+
+      .default-card {
+        margin-bottom: 12px;
+      }
+
+      .default-card__squarecard {
+        width: 130px;
+        height: 130px;
+
+        h2 {
+          height: 130px;
+        }
+      }
+    }
+
+    @include media(">=phone", "<tablet") {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include media(">tablet", "<desktop") {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @include media(">=desktop") {
+      // empty a the moment
+    }
+  }
+
+  &__no-margin-top {
+    margin-top: 0px;
+  }
+
+  &__no-margin-bottom {
+    margin-bottom: 0px;
+  }
+
+  ////////// - GRID FIVE - //////////
+  &__six {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+
+    img {
+      height: auto;
+      width: 107px;
+      align-self: baseline;
+    }
+
+    @include media("<=phone") {
+      grid-template-columns: 1fr 1fr;
+      margin-top: 17px;
+
+      img {
+        // height: 20px;
+        grid-row-gap: 25px;
+      }
+    }
+
+    @include media(">=phone", "<tablet") {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include media(">tablet", "<desktop") {
+      // grid-template-columns: 2fr 2fr;
+    }
+
+    @include media(">=desktop") {}
+  }
+}
+
+////////// - RARE USE - ////////
+
+.maxwidth-wrapper-pagebuilder {
+  max-width: $maxwidth;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin: 0 auto;
+
+  @include media(">tablet") {
+    margin-top: 32px;
+  }
+}
+
+.maxwidth-wrapper {
+  // max-width: $maxwidth;
+  margin: 0 auto;
+}
+
+.block {
+  display: flex;
+  justify-content: center;
+  margin-top: $marginsBetweenBlocks;
+}
+
+.block:first-child {
+  margin-top: 0px;
+}
+
+.block:last-child {
+  margin-bottom: 70px;
+}
+
+.image-caption {
+  color: $captioncolor;
+  font-weight: $f-w-caption;
+  font-size: $f-caption;
+  margin-top: -20px;
+}
+
+.youtube-iframe {
+  margin-top: 10px;
+  width: 730px;
+  height: 410px;
+  // width: 910px;
+
+  // height: 505px;
+
+  @include media("<phone") {
+
+    width: 100%;
+    height: 75%;
+  }
+
+  @include media(">phone", "<tablet") {
+
+    width: 380px;
+    height: 215px;
+  }
+
+
+}
+
+
+
+.img-default {
+  width: 100%;
+
+  img {
+
+    border-radius: $border-radius;
+    box-shadow: 0px 6px 26px 0px rgba(0, 0, 0, 0.18);
+  }
+
+  &--mid-height {
+    max-height: 300px;
+  }
+}
+
+
+
+.helperclass_margin_top:first-child {
+  @include media("<phone") {
+    margin-top: 100px;
+  }
+
+  @include media(">phone", "<tablet") {
+    margin-top: 00px;
+  }
+}
+
+.helperclass_no_block_margin {
+  margin-top: 0px;
+}
+
+.helperclass_margin_top {
+  margin-top: 50px;
+}
+
+.helperclass_margin_bottom {
+  margin-bottom: 50px;
+}
+
+.helperclass_margin_top-negativ {
+  margin-top: -50px;
+}
+
+.sticky_ph {
+  position: fixed;
+  bottom: 30px;
+  right: 50px;
+}
+
+.maxwidth-500 {
+  max-width: 500px;
+  ;
+}
+
+.maxwidth-800 {
+  max-width: 800px;
+  ;
+}
+
+//End Of GLOBAL SCSS //
+.jobs {
+
+  &__cta {
+    max-width: 500px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    h2 {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__headline {
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    h3 {
+      font-weight: 100;
+      margin-top: 0px;
+      font-size: 1rem;
+      color: black;
+      opacity: 0.61;
+    }
+  }
+
+  &__description {
+    text-align: left;
+
+    h2 {
+      font-size: 1.8rem;
+      line-height: 1.8;
+
+    }
+  }
+
+  &__in-short-block {
+    background-color: $darkBlue;
+    border-radius: $border-radius;
+    padding: 80px;
+    color: white;
+
+    h4 {
+      color: white;
+      opacity: 0.81;
+    }
+
+    p {
+      color: white;
+      opacity: 0.61;
+    }
+  }
+
+  &__texts {
+    max-width: 500px;
+    justify-items: left;
+    text-align: left;
+  }
+
+
+  &__process {
+    padding: 32px;
+    ;
+    border-radius: $border-radius;
+    background-color: $darkBlue;
+    display: grid;
+    justify-items: center;
+
+    @include media(">=phone", "<tablet") {
+      padding: 24px;
+    }
+
+    @include media("<=phone") {
+      padding: 0px;
+    }
+
+    &__text {
+      padding: 48px;
+      text-align: center;
+      max-width: 800px;
+
+      h3 {
+        margin-bottom: 34px;
+        color: white;
+        opacity: 0.81
+      }
+
+      p {
+        color: white;
+        opacity: 0.61
+      }
+    }
+
+    &__steps {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas:
+        "bee tuna pig"
+        "bee-text tuna-text pig-text";
+
+      grid-template-rows: auto;
+
+      @include media("<=phone") {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "bee"
+          "bee-text"
+          "tuna"
+          "tuna-text"
+          "pig"
+          "pig-text";
+        grid-template-rows: auto;
+
+      }
+
+      @include media(">=phone", "<tablet") {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          "bee bee-text"
+          "tuna tuna-text"
+          "pig pig-text";
+        grid-template-rows: auto;
+
+      }
+
+
+      &__step {
+        border-radius: $border-radius;
+        height: 300px;
+        //   width: 100%;
+        margin: 24px;
+        display: grid;
+        align-content: center;
+
+        text-align: center;
+
+        &--bee {
+          background-color: $littleBee;
+          grid-area: bee;
+        }
+
+        &--tuna {
+          background-color: $littleTuna;
+          grid-area: tuna;
+        }
+
+        &--pig {
+          background-color: $littlePig;
+          grid-area: pig;
+        }
+      }
+    }
+
+    &__description {
+      margin: 24px;
+      margin-top: 0px;
+
+      &--one {
+        grid-area: bee-text;
+      }
+
+      &--two {
+        grid-area: tuna-text
+      }
+
+      &--three {
+        grid-area: pig-text
+      }
+
+      p {
+        color: white;
+        opacity: 0.61;
+        ;
+      }
+
+      h4 {
+        color: white;
+        opacity: 0.81;
+      }
+    }
+  }
+}
+
+
+
+.career {
+  h1 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  h2 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  h3 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  h4 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  p {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  &__vacancies {
+    padding-bottom: 100px;
+
+    a {
+      margin-top: 35px;
+      font-size: 2rem;
+      text-transform: uppercase;
+      text-decoration: underline;
+      color: $darkBlue;
+      font-weight: 100;
+    }
+  }
+
+
+  &__locations {
+
+    &--imagegrid {
+      margin-top: 15px;
+      ;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 40px;
+
+      img {
+        width: 300px;
+        border-radius: 35%;
+      }
+
+      @include media("<tablet") {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  &__a-little-sth {
+    max-width: 500px;
+    text-align: left;
+
+    h2 {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__img-container {
+    background-image: url(/assets/images/eberswalder.jpeg);
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+  }
+
+  &__block {
+    margin-top: 0px;
+    padding-top: 50px;
+
+    &--dark {
+      background-color: $darkBlue;
+
+      h2 {
+        margin-top: 70px;
+        color: white;
+        font-style: italic;
+      }
+
+      h4 {
+        margin-top: 00px;
+        color: white;
+        font-style: italic;
+      }
+
+      p {
+        margin-top: 40px;
+        margin-bottom: 70px;
+        color: white;
+      }
+    }
+
+    &--quote {
+      p {
+        margin-top: 70px;
+      }
+    }
+  }
+}

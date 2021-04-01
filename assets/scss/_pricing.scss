@@ -1,0 +1,242 @@
+/* Toggle start */
+.toggle-container {
+  margin-top: $marginSmall * 2;
+  margin-bottom: $marginSmall;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 44px 1fr;
+
+  .left {
+    text-align: right;
+    margin-right: $marginSmall;
+    margin-bottom: 14px;
+  }
+
+  .right {
+    text-align: left;
+    margin-left: $marginSmall;
+    margin-bottom: 14px;
+  }
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #26252f;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  input:checked + .slider {
+    background-color: #26252f;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #26252f;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+}
+/* Toggle end */
+.pricing-specific {
+  h2 {
+    font-size: $f-bold;
+    font-weight: bold;
+  }
+  p {
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+
+  .per-month {
+    padding-left: 52px;
+    margin-top: -24px;
+  }
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position! */
+.sticky {
+  @include media("<=phone") {
+    animation: fade-toggle-in 150ms ease-out forwards;
+    position: fixed;
+    bottom: 40px;
+    left: 15%;
+    width: 70%;
+    border-radius: 24px;
+    background-color: white;
+    -webkit-box-shadow: 0px 6px 26px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 6px 26px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 6px 26px 0px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.table-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  color: $darkBlue;
+  margin-top: 40px;
+}
+
+.support-container {
+  color: $mainAccent;
+  font-weight: $f-w-bold;
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  margin-bottom: 80px;
+}
+
+.table-column {
+  border: 1px solid $fontwhite;
+  border-style: solid solid none none;
+}
+
+.support-column {
+  border: 1px solid $fontwhite;
+  border-style: none solid none none;
+}
+
+.table-row {
+  border: 1px solid $fontwhite;
+  border-style: none none solid none;
+  padding: 16px;
+  text-align: center;
+  height: 3em;
+}
+
+.table-row-img {
+  /* border-style: none;
+    padding: 0px;
+    margin-top: -4px;
+    margin-bottom: -8px; */
+
+  background: url(/assets/images/check_icon.svg) no-repeat center;
+}
+
+.support {
+  border: 0px solid $fontwhite;
+  border-style: none none none none;
+  padding: 16px;
+  text-align: center;
+  a {
+    font-size: $f-p;
+    color: $darkBlue;
+  }
+}
+
+.support-row {
+  display: grid;
+  border-style: none none solid none !important;
+}
+
+.support-text {
+  text-align: center;
+}
+
+.support-cell {
+  border-style: none none solid none;
+}
+
+.feature-cell {
+  text-align: left;
+  border-style: none none solid solid;
+}
+
+.empty-cell {
+  background-color: $almostWhite;
+}
+
+.table-head {
+  // font-family: ;
+}
+
+.pricing-filedownload {
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.discount {
+  .button {
+  }
+  .button:hover {
+    background-color: indigo;
+    animation: discoBG 0.9s infinite;
+    border: none;
+  }
+  span {
+    color: rgb(173, 173, 173);
+    text-decoration: line-through;
+    font-size: $f-medium;
+  }
+  &__month {
+    margin-left: 36px;
+  }
+
+  h2 {
+    animation: disco 1s infinite;
+  }
+
+  img {
+    position: absolute;
+    margin-top: -99px;
+    margin-left: 125px;
+    width: 108px;
+
+    @include media(">phone", "<tablet") {
+      //  display: none;
+      z-index: 1;
+      margin-top: -85px;
+      margin-left: 125px;
+      width: 108px;
+    }
+
+    @include media("<phone") {
+      //  display: none;
+      z-index: 1;
+      // margin-top: -85px;
+      // margin-left: 125px;
+      width: 160px;
+    }
+  }
+}

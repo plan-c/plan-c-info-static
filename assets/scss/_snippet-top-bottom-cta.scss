@@ -1,0 +1,54 @@
+.headersnippet {
+  padding: 0vh 50px 0vh 50px;
+  background-color: $transparent;
+  width: 100%;
+  p {
+    // color: $h3color;
+    //margin-bottom: 40px;
+  }
+  .button {
+    color: #fff;
+  }
+}
+
+@include media( "<tablet") {
+  .headersnippet {
+    padding: 0;
+  }
+}
+
+
+
+.bottomsnippet {
+  padding: 90px 10px 90px 10px;
+  //background-color: $newBlue;
+  background-image: linear-gradient(to top left,#23b792,#23b2b7);
+  border-radius: 24px;
+  p {
+    margin-bottom: 40px;
+    color: $fontwhite;
+  }
+
+  h2 {
+    color: $fontwhite;
+  }
+  .bottomCTA_button{
+    color: #fff;
+    border: solid;
+    border-width: $border-width;
+  }
+  .bottomCTA_button:hover {
+      border:none;
+      background-color:$darkBlue;
+      animation: buttonhover 100ms normal forwards;
+  }
+}
+
+.opacity-6 {
+  opacity: 0.6;
+}
+
+.honeypot {
+  position: absolute;
+  left: -9999px;
+}
